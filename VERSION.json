@@ -1,1 +1,5 @@
-{"version":"20200927.6"}
+{
+  "version": "20200927.6",
+  "web_version": "20201005.2",
+  "ffmpeg_version": "4.3.1-1"
+}
