@@ -29,8 +29,10 @@ ARG FFMPEG_VERSION
 RUN debfile="/tmp/ffmpeg.deb" && curl -fsSL -o "${debfile}" "https://repo.jellyfin.org/releases/server/ubuntu/ffmpeg/jellyfin-ffmpeg_${FFMPEG_VERSION}-bionic_armhf.deb" && dpkg --install "${debfile}" && rm "${debfile}"
 
 ARG VERSION
+ARG SERVER_URL_ARM
 ARG WEB_VERSION
-RUN debfile="/tmp/jellyfin.deb" && curl -fsSL -o "${debfile}" "https://repo.jellyfin.org/releases/server/ubuntu/unstable/server/jellyfin-server_${VERSION}-unstable_armhf.deb" && dpkg --install "${debfile}" && rm "${debfile}" && \
-    debfile="/tmp/jellyfin.deb" && curl -fsSL -o "${debfile}" "https://repo.jellyfin.org/releases/server/ubuntu/unstable/web/jellyfin-web_${WEB_VERSION}-unstable_all.deb" && dpkg --install "${debfile}" && rm "${debfile}"
+RUN zipfile="/tmp/jellyfin-server.zip" && curl -fsSL -o "${zipfile}" "${SERVER_URL_ARM}" && unzip -q "${zipfile}" -d "/tmp" && rm "${zipfile}" && \
+    debfile="/tmp/jellyfin-server-ubuntu.armhf/jellyfin-server_${VERSION}-unstable_armhf.deb" && dpkg --install "${debfile}" && rm -rf "/tmp/jellyfin-server-ubuntu.armhf" && \
+    debfile="/tmp/jellyfin-web.deb" && curl -fsSL -o "${debfile}" "https://repo.jellyfin.org/releases/server/ubuntu/unstable/web/jellyfin-web_${WEB_VERSION}-unstable_all.deb" && dpkg --install "${debfile}" && rm "${debfile}"
 
 COPY root/ /

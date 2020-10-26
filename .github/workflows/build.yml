@@ -67,6 +67,9 @@ jobs:
           echo ::set-output name=version::$(jq -r '.version' < VERSION.json)
           echo ::set-output name=version_web::$(jq -r '.web_version' < VERSION.json)
           echo ::set-output name=version_ffmpeg::$(jq -r '.ffmpeg_version' < VERSION.json)
+          echo ::set-output name=server_url_amd64::$(jq -r '.server_url_amd64' < VERSION.json)
+          echo ::set-output name=server_url_arm64::$(jq -r '.server_url_arm64' < VERSION.json)
+          echo ::set-output name=server_url_arm::$(jq -r '.server_url_arm' < VERSION.json)
 
       - name: Build and push
         uses: docker/build-push-action@v2
@@ -89,6 +92,9 @@ jobs:
             org.opencontainers.image.version=${{ steps.prep.outputs.version }}
           build-args: |
             VERSION=${{ steps.prep.outputs.version }}
+            SERVER_URL_AMD64=${{ steps.prep.outputs.server_url_amd64 }}
+            SERVER_URL_ARM64=${{ steps.prep.outputs.server_url_arm64 }}
+            SERVER_URL_ARM=${{ steps.prep.outputs.server_url_arm }}
             WEB_VERSION=${{ steps.prep.outputs.version_web }}
             FFMPEG_VERSION=${{ steps.prep.outputs.version_ffmpeg }}
 
