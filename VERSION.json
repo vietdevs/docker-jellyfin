@@ -3,6 +3,6 @@
   "server_url_amd64": "https://artprodsu6weu.artifacts.visualstudio.com/Aa752b3a7-9db7-4862-a13c-768672f19bbe/7cce6c46-d610-45e3-9fb7-65a6bfd1b671/_apis/artifact/cGlwZWxpbmVhcnRpZmFjdDovL2plbGx5ZmluLXByb2plY3QvcHJvamVjdElkLzdjY2U2YzQ2LWQ2MTAtNDVlMy05ZmI3LTY1YTZiZmQxYjY3MS9idWlsZElkLzE3MTg1L2FydGlmYWN0TmFtZS9qZWxseWZpbi1zZXJ2ZXItdWJ1bnR1LmFtZDY00/content?format=zip",
   "server_url_arm64": "https://artprodsu6weu.artifacts.visualstudio.com/Aa752b3a7-9db7-4862-a13c-768672f19bbe/7cce6c46-d610-45e3-9fb7-65a6bfd1b671/_apis/artifact/cGlwZWxpbmVhcnRpZmFjdDovL2plbGx5ZmluLXByb2plY3QvcHJvamVjdElkLzdjY2U2YzQ2LWQ2MTAtNDVlMy05ZmI3LTY1YTZiZmQxYjY3MS9idWlsZElkLzE3MTg1L2FydGlmYWN0TmFtZS9qZWxseWZpbi1zZXJ2ZXItdWJ1bnR1LmFybTY00/content?format=zip",
   "server_url_arm": "https://artprodsu6weu.artifacts.visualstudio.com/Aa752b3a7-9db7-4862-a13c-768672f19bbe/7cce6c46-d610-45e3-9fb7-65a6bfd1b671/_apis/artifact/cGlwZWxpbmVhcnRpZmFjdDovL2plbGx5ZmluLXByb2plY3QvcHJvamVjdElkLzdjY2U2YzQ2LWQ2MTAtNDVlMy05ZmI3LTY1YTZiZmQxYjY3MS9idWlsZElkLzE3MTg1L2FydGlmYWN0TmFtZS9qZWxseWZpbi1zZXJ2ZXItdWJ1bnR1LmFybWhm0/content?format=zip",
-  "web_version": "20201030.12",
+  "web_version": "20201030.13",
   "ffmpeg_version": "4.3.1-1"
 }
